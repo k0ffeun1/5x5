@@ -33,7 +33,7 @@ function getTable(rows, columns) {
 	}
 }
 
-getTable(4,5)
+getTable(4, 5)
 
 let columns = document.querySelectorAll('.column')
 let counter = 1
@@ -80,6 +80,11 @@ function getRandomNums() {
 				console.log('asf');
 				element.style.background = 'red'
 				element.style.color = 'white'
+			} else {
+				mask.style.opacity = 1
+				mask.style.zIndex = 5
+				modal.style.opacity = 1
+				modal2.style.opacity = 0
 			}
 		}
 	})
@@ -108,8 +113,10 @@ btn.onclick = function () {
 	mask.style.zIndex = -1
 	modal.zIndex = -1
 	timerDiv.style.opacity = 1
+	btn.style.display = 'none'
 	getTime(15)
-	return getRandomNums()
+	getRandomNums()
+
 }
 
 
