@@ -37,7 +37,7 @@ body {
 }
 
 .text {
-  padding-top: 80px;
+  padding-top: 40px;
   width: 80%;
   margin: 0 auto;
   text-align: center;
@@ -126,11 +126,16 @@ body {
   border-radius: 10px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  font-size: 50px;
 }
 
 .btn:hover {
   background-color: black;
   color: white;
+}
+
+.btn:not(:last-child) {
+  margin-right: 50px;
 }
 
 .mask {

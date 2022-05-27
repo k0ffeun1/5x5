@@ -6,7 +6,7 @@
 // (предыдущие правильные ячейки не снимают выделение). 
 // Должен тикать таймер, на игру дается M секунд. 
 // Если не успел найти все числа по порядку - проиграл.
-
+const text = document.getElementById('text')
 const table = document.getElementById('table')
 const btn = document.getElementById('btn')
 const start = document.getElementById('start')
@@ -17,6 +17,10 @@ const modal = document.getElementById('modal')
 const modal2 = document.getElementById('modal2')
 const input1 = document.getElementById('input1')
 const input2 = document.getElementById('input2')
+const levels = document.getElementById('levels')
+const easy = document.getElementById('easy')
+const medium = document.getElementById('medium')
+const hard = document.getElementById('hard')
 
 let row = null
 let column = null
@@ -33,23 +37,14 @@ function getTable(rows, columns) {
 	}
 }
 
-getTable(4, 5)
+
+
+let counter = 1
 
 let columns = document.querySelectorAll('.column')
-let counter = 1
-function getCounter() {
-	table.onclick = function () {
-		counter += 1
-		if (counter === columns.length + 1) {
-			mask.style.opacity = 1
-			mask.style.zIndex = 5
-			modal2.style.opacity = 1
-			modal.style.opacity = 0
-		}
-	}
-}
 getCounter()
 function getRandomNums() {
+	columns = document.querySelectorAll('.column')
 	let colors = [
 		'red', 'green', 'black', 'gray', 'blue',
 		'OrangeRed', 'DarkMagenta', 'SaddleBrown',
@@ -58,7 +53,6 @@ function getRandomNums() {
 		'YellowGreen'
 	]
 	let array = []
-	let array2 = []
 	for (i = 0; i < columns.length; i++) {
 		array.push(columns[i])
 	}
@@ -71,7 +65,7 @@ function getRandomNums() {
 		let element = array[j]
 		element.innerHTML = j + 1
 	}
-	let getNum = array.map(function (element, index) {
+	let getNum = array.map(function (element) {
 		element.onclick = function () {
 			console.log(counter);
 			// element.style.background = 'red'
@@ -90,8 +84,21 @@ function getRandomNums() {
 	})
 	let change = array.map(function (elem) {
 		elem.style.color = colors[Math.floor(Math.random() * colors.length)]
-
 	})
+}
+
+function getCounter() {
+	table.onclick = function () {
+		counter += 1
+		if (counter === columns.length + 1) {
+			mask.style.opacity = 1
+			mask.style.zIndex = 5
+			modal2.style.opacity = 1
+			modal2.style.zIndex = 100
+			modal.style.display = 'none'
+			
+		}
+	}
 }
 function getTime(timer) {
 	let timeFunc = setInterval(() => {
@@ -102,21 +109,40 @@ function getTime(timer) {
 			mask.style.zIndex = 5
 			modal.style.opacity = 1
 			modal2.style.opacity = 0
-			timeEL.innerHTML = ''
 			clearInterval(timeFunc)
-		}
+		} 
 	}, 1000);
 }
-
-btn.onclick = function () {
+easy.onclick = function() {
+	getTable(4, 4)
 	mask.style.opacity = 0
 	mask.style.zIndex = -1
 	modal.zIndex = -1
+	levels.style.display = 'none'
 	timerDiv.style.opacity = 1
-	btn.style.display = 'none'
 	getTime(15)
 	getRandomNums()
+}
+medium.onclick = function() {
+	getTable(6, 6)
+	mask.style.opacity = 0
+	mask.style.zIndex = -1
+	modal.zIndex = -1
+	levels.style.display = 'none'
+	timerDiv.style.opacity = 1
+	getTime(35)
+	getRandomNums()
+}
 
+hard.onclick = function() {
+	getTable(6, 10)
+	mask.style.opacity = 0
+	mask.style.zIndex = -1
+	modal.zIndex = -1
+	levels.style.display = 'none'
+	timerDiv.style.opacity = 1
+	getTime(120)
+	getRandomNums()
 }
 
 

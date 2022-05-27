@@ -16,18 +16,21 @@
         по порядку от 1 до N. Все числа разного размера и цвета. Играющему необходимо по порядку кликать по числам -
         сначала 1, потом 2 и так далее до N. Когда он кликает на правильную ячейку - она активируется и делает красный
         фон (предыдущие правильные ячейки не снимают выделение). Должен тикать таймер, на игру дается M секунд. Если не
-        успел найти все числа по порядку - проиграл.
+        успел найти все числа по порядку - проиграл. Если нажал не ту цифру - проиграл
+    </div>
+    <div id="levels" class="levels">
+        <button id="easy" class="btn">4х4</button>
+        <button id="medium" class="btn">6х6</button>
+        <button id="hard" class="btn">6х10</button>
     </div>
     <div id="timerDiv" class="timer">
         <p class="timer__text">Осталось:</p>
         <div id="time" class="time"></div>
     </div>
     <div id="table" class="table"></div>
-    <button id="btn" class="btn" type="button">Начать</button>
     <div id="mask" class="mask">
         <div id="modal" class="modal">Вы проиграли!</div>
         <div id="modal2" class="modal">Вы победили!</div>
-
     </div>
 
 
