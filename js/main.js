@@ -82,9 +82,9 @@ function getRandomNums() {
 			}
 		}
 	})
-	// let change = array.map(function (elem) {
-	// 	elem.style.color = colors[Math.floor(Math.random() * colors.length)]
-	// })
+	let change = array.map(function (elem) {
+		elem.style.color = colors[Math.floor(Math.random() * colors.length)]
+	})
 }
 
 function getCounter() {
@@ -141,7 +141,7 @@ hard.onclick = function() {
 	modal.zIndex = -1
 	levels.style.display = 'none'
 	timerDiv.style.opacity = 1
-	getTime(120)
+	getTime(105)
 	getRandomNums()
 }
 
