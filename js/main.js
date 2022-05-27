@@ -82,9 +82,9 @@ function getRandomNums() {
 			}
 		}
 	})
-	let change = array.map(function (elem) {
-		elem.style.color = colors[Math.floor(Math.random() * colors.length)]
-	})
+	// let change = array.map(function (elem) {
+	// 	elem.style.color = colors[Math.floor(Math.random() * colors.length)]
+	// })
 }
 
 function getCounter() {
