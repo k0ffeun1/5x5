@@ -1,0 +1,114 @@
+@font-face {
+    font-family: "EuclidFlex";
+    src: url(../fonts/EuclidFlex-Regular.otf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "EuclidFlex";
+    src: url(../fonts/EuclidFlex-Medium.otf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: "EuclidFlex";
+    src: url(../fonts/EuclidFlex-Bold.otf);
+    font-weight: 700;
+}
+
+body {
+    background: linear-gradient(rgb(61, 47, 143), rgb(74, 33, 102));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    font-family: "EuclidFlex";
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+.text {
+    padding-top: 80px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+.condition {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    .input {
+        display: block;
+        width: 20%;
+        outline: none;
+    }
+    .input:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+.timer {
+    opacity: 0;
+    display: flex;
+}
+.timer__text {
+    margin-right: 10px;
+}
+.time {
+}
+.table {
+    margin-bottom: 40px;
+}
+.row {
+    display: flex;
+}
+.row:not(:last-child) {
+    margin-bottom: 5px;
+}
+.column {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+.column:not(:last-child) {
+    margin-right: 5px;
+}
+.btn {
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    padding: 5px 25px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    background-color: black;
+    z-index: -1;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%);
+    width: 20%;
+    font-size: 50px;
+    z-index: -1;
+}

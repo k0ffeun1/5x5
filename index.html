@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=0, initial-scale=1.0">
+    <title>krestiki noliki</title>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="body">
+    <div class="text">
+        Сделайте игру. Суть - дана таблица с числами, распаложенными в случайном порядке в ячейках таблицы. Числа идут
+        по порядку от 1 до N. Все числа разного размера и цвета. Играющему необходимо по порядку кликать по числам -
+        сначала 1, потом 2 и так далее до N. Когда он кликает на правильную ячейку - она активируется и делает красный
+        фон (предыдущие правильные ячейки не снимают выделение). Должен тикать таймер, на игру дается M секунд. Если не
+        успел найти все числа по порядку - проиграл.
+    </div>
+    <div id="timerDiv" class="timer">
+        <p class="timer__text">Осталось:</p>
+        <div id="time" class="time"></div>
+    </div>
+    <div id="table" class="table"></div>
+    <button id="btn" class="btn" type="button">Начать</button>
+    <div id="mask" class="mask">
+        <div id="modal" class="modal">Вы проиграли!</div>
+        <div id="modal2" class="modal">Вы победили!</div>
+
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
