@@ -160,3 +160,13 @@ body {
   z-index: -1;
   color: #c00909;
 }
+
+@media (max-width: 1440px) {
+  .text {
+    font-size: 20px;
+  }
+  .column {
+    width: 90px;
+    height: 90px;
+  }
+}
