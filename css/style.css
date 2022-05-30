@@ -30,7 +30,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-size: 25px;
-  font-family: "EuclidFlex";
+  font-family: 'Roboto', sans-serif;
   color: white;
   overflow: hidden;
   position: relative;
